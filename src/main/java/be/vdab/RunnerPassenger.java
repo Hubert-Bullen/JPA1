@@ -21,7 +21,9 @@ public class RunnerPassenger {
         for (Passenger passenger : passengers){
             System.out.println(passenger);
         }
-
+        /*Passenger p = em.find(Passenger.class,1);
+        System.out.println(p);
+*/
 
 
 

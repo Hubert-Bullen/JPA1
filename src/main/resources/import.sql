@@ -10,4 +10,10 @@ insert into book(title, author, isbn) values('Norwegian Wood', 'Haruki Murakami'
 
 
 
-INSERT INTO passenger( dateOfBirth, firstName, freqFlyerMiles, lastName, passenger_type) VALUES(CURDATE(), 'James','327', 'Potter', 'REGULAR')
+INSERT INTO passenger( dateOfBirth, firstName, freqFlyerMiles, lastName, passenger_type) VALUES(CURDATE(), 'James','327', 'Potter', 'REGULAR');
+
+INSERT INTO passenger( dateOfBirth, firstName, freqFlyerMiles, lastName, passenger_type) VALUES(CURDATE(), 'Regulus','179', 'Black', 'REGULAR');
+
+INSERT INTO passenger( dateOfBirth, firstName, freqFlyerMiles, lastName, passenger_type) VALUES(CURDATE(), 'Remus','169', 'Lupin', 'REGULAR');
+
+INSERT INTO passenger( dateOfBirth, firstName, freqFlyerMiles, lastName, passenger_type) VALUES(CURDATE(), 'Peter','999', 'Pettigrew', 'FREQUENT_FLYER');

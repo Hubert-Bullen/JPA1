@@ -20,7 +20,7 @@
 
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
 
-            <property name="hibernate.hbm2ddl.auto" value="create"/><!--create-drop is voor wanneer alles weg moet erna, de lijn kunde weg laten als je met bestaand tabel werkt.-->
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/><!--create-drop is voor wanneer alles weg moet erna, de lijn kunde weg laten als je met bestaand tabel werkt.-->
 
             <property name="hibernate.show_sql" value="true"/>
 

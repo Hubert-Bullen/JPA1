@@ -1,8 +1,10 @@
 package be.vdab;
 
+import sun.security.krb5.internal.PAData;
 import sun.security.util.Length;
 
 import javax.persistence.*;
+import java.util.Arrays;
 import java.util.Date;
 
 /**
@@ -12,7 +14,7 @@ import java.util.Date;
 public class Passenger {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     private int freqFlyerMiles;
 
@@ -26,14 +28,14 @@ public class Passenger {
     private String lastName;
 
     @Temporal(TemporalType.DATE)
-    @Column(nullable = false, updatable = false)
+    @Column(/*nullable = false,*/ updatable = false) // Sneller voor tests te schrijven zonder nullable
     private Date dateOfBirth;
 
     @Transient
     private int age;
 
     @Enumerated(EnumType.STRING) // Staat er nu in als String in de tabel.
-    @Column (name = "passenger_type", nullable = false) // Eerste keer zal die naam altijd een "error" zijn want je geeft een tabel die nog niet bestaat al een naam.
+    @Column (name = "passenger_type"/*, nullable = false*/) // Eerste keer zal die naam altijd een "error" zijn want je geeft een tabel die nog niet bestaat al een naam.
     private Passengertype ptype;
 
     public Passenger(int freqFlyerMiles, Byte[] picture, String firstName, String lastName, Date dateOfBirth, int age, Passengertype ptype) {
@@ -45,6 +47,7 @@ public class Passenger {
         this.age = age;
         this.ptype = ptype;
     }
+
 
     public Passenger() {
     }
@@ -112,4 +115,20 @@ public class Passenger {
     public void setPtype(Passengertype ptype) {
         this.ptype = ptype;
     }
+
+    @Override
+    public String toString() {
+        return "Passenger{" +
+                "id=" + id +
+                ", freqFlyerMiles=" + freqFlyerMiles +
+                ", picture=" + Arrays.toString(picture) +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", age=" + age +
+                ", ptype=" + ptype +
+                '}';
+    }
+
+
 }

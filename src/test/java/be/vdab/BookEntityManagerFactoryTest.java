@@ -9,7 +9,8 @@ import static org.junit.Assert.assertEquals;
  * Created by Hyuberuto on 26/05/15.
  */
 
-public class BookEntityManagerFactoryTest extends AbstractEntityManagerFactoryTest /*extends TestCase*/ { /*Niet van toepassing niet meer met deze versie van Junit! Assert moet gewoon static geimport worden.*/
+public class BookEntityManagerFactoryTest extends AbstractEntityManagerFactoryTest /*extends TestCase*/ {
+/*Niet van toepassing niet meer met deze versie van Junit! Assert moet gewoon static geimport worden.*/
 
     @Test
     public void testAmountOfBooks() {

@@ -1,3 +1,5 @@
+package be.vdab;
+
 import javax.persistence.EntityManager;
 import java.util.List;
 
@@ -13,4 +15,5 @@ public class BookRepositoryBean implements BookRepositoryDao {
     public List<Book> findAllBooks() {
         return em.createQuery("select b from Book b",
                 Book.class).getResultList();
-    } }
+    }
+}

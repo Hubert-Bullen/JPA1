@@ -4,26 +4,25 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
    http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
              version="2.0">
-    <persistence-unit name="RealDolmenPersistenceUnit"
+    <persistence-unit name="Books-JPA"
                       transaction-type="RESOURCE_LOCAL">
-        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <!-- add properties here -->
         <properties>
 
-        <property name="javax.persistence.jdbc.driver"
-                  value="com.mysql.jdbc.Driver"/>
-        <property name="javax.persistence.jdbc.url"
-                  value="jdbc:mysql://localhost:3306/Books-JPA"/>
-        <property name="javax.persistence.jdbc.user"
-                  value="root"/>
-        <property name="javax.persistence.jdbc.password"
-                  value=""/>
-        <property name="hibernate.dialect"
-           value="org.hibernate.dialect.MySQL5Dialect"/>
-        <property name="hibernate.hbm2ddl.auto"
-           value="create-drop"/>
-        <property name="hibernate.show_sql"
-           value="true"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Books-JPA"/>
+
+            <property name="javax.persistence.jdbc.user" value="root"/>
+
+            <property name="javax.persistence.jdbc.password" value=""/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="create"/><!--create-drop is voor wanneer alles weg moet erna, de lijn kunde weg laten als je met bestaand tabel werkt.-->
+
+            <property name="hibernate.show_sql" value="true"/>
 
         </properties>
 

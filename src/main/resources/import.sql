@@ -7,3 +7,7 @@ insert into book(title, author, isbn) values('Shogun', 'James Clavell', '0000000
 insert into book(title, author, isbn) values('Coraline', 'Neil Gaiman', '0000000004');
 
 insert into book(title, author, isbn) values('Norwegian Wood', 'Haruki Murakami', '0000000005');
+
+
+
+INSERT INTO passenger( dateOfBirth, firstName, freqFlyerMiles, lastName, passenger_type) VALUES(CURDATE(), 'James','327', 'Potter', 'REGULAR')

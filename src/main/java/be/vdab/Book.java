@@ -1,3 +1,5 @@
+package be.vdab;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -55,6 +57,16 @@ public class Book implements Serializable {
 
     public void setIsbn(String isbn) {
         this.isbn = isbn;
+    }
+
+    @Override
+    public String toString() {
+        return "be.vdab.Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", isbn='" + isbn + '\'' +
+                '}';
     }
 }
 

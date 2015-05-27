@@ -10,10 +10,21 @@ insert into book(title, author, isbn) values('Norwegian Wood', 'Haruki Murakami'
 
 
 
-INSERT INTO passenger( dateOfBirth, firstName, freqFlyerMiles, lastName, passenger_type) VALUES(CURDATE(), 'James','327', 'Potter', 'REGULAR');
+INSERT INTO passenger(dateOfBirth, firstName, freqFlyerMiles, lastName, passenger_type) VALUES(CURDATE(), 'James','327', 'Potter', 'REGULAR');
 
-INSERT INTO passenger( dateOfBirth, firstName, freqFlyerMiles, lastName, passenger_type) VALUES(CURDATE(), 'Regulus','179', 'Black', 'REGULAR');
+INSERT INTO passenger(dateOfBirth, firstName, freqFlyerMiles, lastName, passenger_type) VALUES(CURDATE(), 'Regulus','179', 'Black', 'REGULAR');
 
-INSERT INTO passenger( dateOfBirth, firstName, freqFlyerMiles, lastName, passenger_type) VALUES(CURDATE(), 'Remus','169', 'Lupin', 'REGULAR');
+INSERT INTO passenger(dateOfBirth, firstName, freqFlyerMiles, lastName, passenger_type) VALUES(CURDATE(), 'Remus','169', 'Lupin', 'REGULAR');
 
-INSERT INTO passenger( dateOfBirth, firstName, freqFlyerMiles, lastName, passenger_type) VALUES(CURDATE(), 'Peter','999', 'Pettigrew', 'FREQUENT_FLYER');
+INSERT INTO passenger(dateOfBirth, firstName, freqFlyerMiles, lastName, passenger_type) VALUES(CURDATE(), 'Peter','999', 'Pettigrew', 'FREQUENT_FLYER');
+
+
+
+INSERT INTO actor (firstName, lastName, gender) VALUES ('Rupert','Grint', 'MALE');
+
+INSERT INTO actor (firstName, lastName, gender) VALUES ('Emma','Watson', 'FEMALE');
+
+
+
+INSERT INTO film (title, length, genre) VALUES ('Harry Potter and the Philosopher''s Stone', 152, 'FANTASY');
+

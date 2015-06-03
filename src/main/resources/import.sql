@@ -28,3 +28,7 @@ INSERT INTO actor (firstName, lastName, gender) VALUES ('Emma','Watson', 'FEMALE
 
 INSERT INTO film (title, length, genre) VALUES ('Harry Potter and the Philosopher''s Stone', 152, 'FANTASY');
 
+
+
+INSERT INTO director(firstName, lastName, gender) VALUES ('Chris', 'Columbus', 'MALE');
+

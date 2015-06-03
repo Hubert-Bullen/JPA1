@@ -1,6 +1,8 @@
 package be.vdab;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Hyuberuto on 27/05/15.
@@ -17,6 +19,15 @@ public class Film {
 
     @Enumerated(EnumType.STRING)
     private Genre genre;
+
+   /* @ManyToOne // 1 film heeft zogezegd meerdere 1 acteur, maar acteurs spelen in meerdere films.
+    Actor actor; // default zodat we er aan kunnen in Actor*/
+
+    @ManyToMany
+    private List<Actor> actors = new ArrayList<>();
+
+    @ManyToOne
+    private Director director;
 
     public Film(String title, int length, Genre genre) {
         this.title = title;
@@ -57,5 +68,27 @@ public class Film {
 
     public void setGenre(Genre genre) {
         this.genre = genre;
+    }
+
+    public List<Actor> getActors() {
+        return actors;
+    }
+
+    public void addActors(List<Actor> actors) {
+        this.actors.addAll(actors);
+        for (Actor a : actors){
+            a.films.add(this);
+        }
+
+    }
+
+    public Director getDirector() {
+        return director;
+    }
+
+    public void addDirector(Director d) {
+        this.director = d;
+        d.films.add(this);
+
     }
 }
